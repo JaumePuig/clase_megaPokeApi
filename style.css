@@ -1,0 +1,153 @@
+/* IMPORTACIONES */
+@font-face {
+  font-family: "PokeClassic";
+  src: url("/PokeClassic.ttf");
+}
+
+/* Variables */
+:root {
+  --border-radius: 10px;
+  --pepsiBlue: rgb(25, 25, 200);
+  --backgroundBlue: rgb(100, 100, 180);
+  --sombra: 0 5px 25px rgba(150, 20, 20, 1);
+}
+
+* {
+  font-family: "PokeClassic";
+}
+
+body {
+  background-color: rgb(211, 211, 211);
+  margin: 0;
+  padding: 0;
+  font-family: "PokeClassic";
+}
+
+ul li {
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+}
+
+.orientacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
+
+.logo_header {
+  height: 100px;
+}
+
+.header_class {
+  background-color: var(--backgroundBlue);
+  a {
+    color: var(--pepsiBlue);
+    &::after {
+      color: var(--pepsiBlue);
+    }
+    &:hover {
+      color: rgb(200, 0, 50);
+    }
+  }
+
+  @media (max-width: 620px) {
+    color: rgb(0, 100, 200);
+  }
+}
+
+b {
+  color: lightblue;
+}
+
+.secciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.tapasmagazine.es/wp-content/uploads/2023/03/nuevo-logo-pepsi.jpg")
+      no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: var(--pepsiBlue);
+
+  button {
+    border-radius: 15%;
+    border: solid 3px rgb(200, 25, 25);
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    color: aliceblue;
+    background-color: rgb(25, 25, 100);
+
+    &:hover {
+      background-color: rgb(10, 0, 255);
+    }
+    &:active {
+      background-color: rgb(200, 25, 25);
+    }
+  }
+}
+
+.proyectos {
+  background-color: var(--backgroundBlue);
+  .card {
+    max-width: 200px;
+    max-height: 300px;
+    border: solid 0.5px darkblue;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    background-color: rgb(100, 100, 250);
+    img {
+      height: 100px;
+      border-radius: var(--border-radius);
+    }
+    &:hover {
+      box-shadow: var(--sombra);
+    }
+  }
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.contactanos{
+    background-color: rgba(200, 50, 50, 0.75);
+}
+
+.contactForm{
+    padding: 50px;
+    min-width: 30%;
+    max-width: 50%;
+    background-color: rgb(250, 125, 125);
+    border-radius: var(--border-radius);
+    gap: 5px;
+    input{
+        width: 300px;
+        color: var(--pepsiBlue);
+        border-radius: var(--border-radius);
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+    textarea{
+        min-width: 300px;
+        color: var(--pepsiBlue);
+        border-radius: var(--border-radius);
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+}
